@@ -1,0 +1,11 @@
+
+services:
+  craftlens:
+    build: .
+    container_name: craftlens
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
